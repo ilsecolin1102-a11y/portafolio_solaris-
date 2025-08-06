@@ -1,0 +1,264 @@
+@font-face {
+  font-family: 'lovera';
+  src: url('fonts/lovera.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Elegante clasica';
+  src: url('fonts/Elegante Classica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Times';
+  src: url('fonts/TIMESS.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    background-color: #F3DFE0;
+    padding-top: 80px; /* Ajusta según la altura de tu navbar */
+}
+
+.navbarSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar-brand img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+/* Sections */
+.seccion {
+    padding: 80px 0; /* Espacio arriba y abajo para separar visualmente */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Agrega separación entre secciones */
+.seccion + .seccion {
+    margin-top: 60px;
+}
+
+/* Cuando se activa, la sección aparece */
+.seccion.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Elimina márgenes/paddings innecesarios */
+.row, .col-md-6 {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Opcional: borde solo si se desea */
+.seccion.custom-border {
+    border: 2px solid #ccc;
+}
+
+/* Estilo para imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+}
+
+/* === MODAL ILUSTRACIÓN DIGITAL === */
+.ilustracion-modal .modal-content {
+    background-color: #fff; /* o transparent si prefieres sin fondo */
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    max-height: 90vh;
+}
+
+.ilustracion-modal .modal-body {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefefe;
+}
+
+.ilustracion-modal img {
+    object-fit: contain;
+    max-height: 90vh;
+    width: 100%;
+}
+
+
+/* Carrusel dentro del modal de ilustración */
+.ilustracion-modal .carousel-inner {
+    max-height: 90vh;
+}
+
+.ilustracion-modal .carousel-item img {
+    object-fit: contain;
+    max-height: 90vh;
+}
+
+/* Estilo personalizado para las leyendas del carrusel */
+.ilustracion-caption {
+    position: static;
+    text-align: center;
+    background-color: #F3DFE0;
+    color: #000000;
+    padding: 10px;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  
+
+
+/* === ESTILOS PARA LA GALERIA DE MODELOS === */
+.modelos-icon {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  #galeriaModelos h1 {
+    font-size: 2.5rem;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  #cardsContainer {
+    margin-top: 20px;
+  }
+  
+  #mostrarCardsBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+  }
+  
+
+/* Estilos para el Modal del Modelo 1 */
+#modelo1Modal .modal-dialog {
+    max-width: 40%;
+  }
+  
+  #modelo1Modal .carousel-inner img {
+    max-width: 100%;  /* La imagen no excederá el 100% del ancho */
+    max-height: 500px; /* Limita la altura para que no sea demasiado grande */
+    object-fit: contain; /* Mantiene la proporción sin recortar */
+    margin: 0 auto; /* Centra la imagen */
+    display: block; /* Asegura que la imagen esté centrada */
+  }
+  
+  /* Estilos para el Modal del Modelo 2 */
+  #modelo2Modal .modal-dialog {
+    max-width: 40%;
+  }
+  
+  #modelo2Modal .carousel-inner img {
+    max-width: 100%;  /* La imagen no excederá el 100% del ancho */
+    max-height: 500px; /* Limita la altura para que no sea demasiado grande */
+    object-fit: contain; /* Mantiene la proporción sin recortar */
+    margin: 0 auto; /* Centra la imagen */
+    display: block; /* Asegura que la imagen esté centrada */
+  }
+  
+  /* Estilos para el Modal del Modelo 3 */
+  #modelo3Modal .modal-dialog {
+    max-width: 40%;
+  }
+  
+  #modelo3Modal .carousel-inner img {
+    max-width: 100%;  /* La imagen no excederá el 100% del ancho */
+    max-height: 500px; /* Limita la altura para que no sea demasiado grande */
+    object-fit: contain; /* Mantiene la proporción sin recortar */
+    margin: 0 auto; /* Centra la imagen */
+    display: block; /* Asegura que la imagen esté centrada */  
+  }
+  
+
+
+  /* MODAL DE MUSEOS */
+  .modal-museos .carousel-inner img {
+    max-height: 500px;
+    object-fit: contain;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columnas iguales */
+  gap: 16px; /* espacio entre ítems */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.skills-list li img {
+  width: 50px;
+  height: 50px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+
+
+.modal-body-person img {
+  max-height: 300px;
+  object-fit: contain;
+}
+
+
+/* DEFINICION DE FUENTES PARA DISTINAS SECCIONES */
+h1, h2{
+  font-family: 'Elegante clasica', sans-serif;
+}
+
+p, li, h5, button, strong {
+  font-family: 'Times', sans-serif;
+
+}
